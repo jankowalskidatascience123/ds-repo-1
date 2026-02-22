@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 
 import pandas as pd
@@ -6,7 +7,8 @@ def _ensure_dir(path: str) -> None:
     '''
     funkcja utworzy ściezke jeśeli nie istnieje
     '''
-    os.makedirs(path, exists_ok=True)
+    now_str = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
+    os.makedirs(f'{path}\\{now_str}', exist_ok=True)
 
 
 def save_csv(df: pd.DataFrame, path: str) -> None:
