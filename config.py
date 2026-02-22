@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     DB_HOST: str
     DB_PORT: int
     DB_NAME: str
+    DATA_PATH: str
     RANDOM_STATE: int
     TEST_SIZE: float
 
